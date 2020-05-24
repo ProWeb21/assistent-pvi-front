@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+
+body {
+	background-color: #00A190;
+}
+.text {
+	text-align: justify; 
+}
+.jumbotron {
+	height: 50vh ;
+	background-color: #00BFA5 !important;
+}
+.zonabotones {
+	text-align: center;
+	font-size: 3rem;
+}
+
+.zonabotones > a {
+	color: black;
+}
+
+.btn {
+	min-width: 70vw;
+}
