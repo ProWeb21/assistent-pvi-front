@@ -14,7 +14,7 @@ module.exports = () => ({
     watchContentBase: true,
     writeToDisk: true
   },
-  devTool: "source-map",
+  devtool: "source-map",
   entry: {
     index:['./src/main.js','./src/assets/css/styles.css']
   },
