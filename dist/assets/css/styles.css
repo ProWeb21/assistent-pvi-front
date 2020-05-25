@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+
+body {
+	background-color: #00A190;
+}
+#title {
+	font-size: 1.5rem;
+}
+
+#info {
+	font-size: 1.2rem;
+	background-color: #00BFA5; 
+}
+.limited {
+	
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#display1{
+	height: 80%;
+}
+#countdown {
+	font-size: 3rem;
+	text-align: center;	
+	color: red;
+	font-weight: bold ;
+}
+.text {
+	text-align: justify; 
+}
+.jumbotron {
+	height: 50vh ;
+	background-color: #00BFA5 !important;
+}
+.navbar {
+	height: 10vh;
+}
+.zonabotones {
+	
+	text-align: center;
+	font-size: 3rem;
+	height:40vh;
+}
+
+.zonabotones > a {
+	color: black;
+	font-size: ;
+}
+
+.btn {
+	min-width: 70vw;
+}
