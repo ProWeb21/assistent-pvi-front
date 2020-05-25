@@ -1,8 +1,13 @@
-		<div class="jumbotron mt-5">
-			<h3 class="text my-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem et facere.</h3>
-		</div>
-		<div class="zonabotones mb-2">
-			<a class="btn btn-primary btn-lg ">Continuar</a><br>
-			<a class="btn btn-success btn-lg" onclick="updateClock(5);">Posponer 5min</a><br>
-			<a class="btn btn-success btn-lg ">Posponer 10min</a>
-		</div>
+		  <!--pospone_step.html-->
+			<div id="display" class="jumbotron mt-5" >
+				<div id="display1" >
+						<h3 class="text my-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+								Nobis dolor molestias, veniam fugit, quos eveniet aliquid Lorem ipsum. Quidem et facere.</h3>
+				</div>
+			</div>
+			<div class="zonabotones mb-2" style="display:flex; flex-direction:column">
+				<a id="btn1" data-action="continue" data-step="2"    class="btn btn-primary btn-lg" >Continuar</a><br>
+				<a id="btn2" data-action="postpone" data-delay="300" class="btn btn-success btn-lg" >Posposar 5min</a><br>
+				<a id="btn3" data-action="postpone" data-delay="600" class="btn btn-success btn-lg" >Posposar 10min</a>
+			</div>
+			<!--pospone_step.html-->
