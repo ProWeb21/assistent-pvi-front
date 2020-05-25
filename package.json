@@ -1,15 +1,16 @@
 {
-  "name": "@proweb21/front-prevencio-indencis",
+  "name": "@proweb21/front-prevencio-incendis",
   "version": "0.0.1",
   "description": "Frontal d'aplicació d'assistència per a l'execució de protocols de prevenció i extinció d'incendis",
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack-dev-server"
+    "start": "npx webpack-dev-server",
+    "build": "webpack --env.production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ProWeb21/prevencio-front.git"
+    "url": "https://github.com/ProWeb21/prevencio-front.git"
   },
   "keywords": [
     "prevenció",
@@ -26,7 +27,13 @@
     "url": "https://github.com/ProWeb21/prevencio-front/issues"
   },
   "homepage": "https://github.com/ProWeb21/prevencio-front#readme",
-  "dependencies": {
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
