@@ -22,13 +22,19 @@
     "barcelona"
   ],
   "author": "Xavi Subirà <xavi@proweb21.com>",
-  "contributors": ["Dani Andrés <dani@proweb21.com>"],
+  "contributors": [
+    "Dani Andrés <dani@proweb21.com>"
+  ],
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/ProWeb21/prevencio-front/issues"
   },
   "homepage": "https://github.com/ProWeb21/prevencio-front#readme",
   "devDependencies": {
+    "@babel/cli": "^7.10.0",
+    "@babel/core": "^7.10.0",
+    "@babel/preset-env": "^7.10.0",
+    "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
