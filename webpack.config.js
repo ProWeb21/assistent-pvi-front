@@ -16,7 +16,7 @@ module.exports = () => ({
   },
   devtool: "source-map",
   entry: {
-    index:['./src/main.js','./src/assets/css/styles.css']
+    index:'./src/main.js'
   },
   mode: 'development',
   module:{
@@ -25,7 +25,7 @@ module.exports = () => ({
         test: /\.s?[ac]ss$/,
         use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"],
       },
-  
+
     ]
   },
   output:
@@ -49,6 +49,6 @@ module.exports = () => ({
     }), 
 
   ],
-
+  
   target: "web"  
 })
