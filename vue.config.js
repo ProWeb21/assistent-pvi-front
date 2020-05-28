@@ -37,6 +37,7 @@ module.exports = {
         options.fallback.options.esModule= false
         return options
       })
+    config.resolve.alias.merge(webpack_config.resolve.alias,['vue$'])
   },
   css:{
     requireModuleExtension: true,
