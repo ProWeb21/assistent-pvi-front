@@ -1,8 +1,8 @@
 // STYLES
-import "./assets/css/styles.css"
+import "@css/styles.css"
 // SCRIPTS
-import modal_html from "html-loader!./templates/partials/timer_modal.html";
-import Postpone from "./modules/postpone.js"
+import modal_html from "html-loader!@partials/timer_modal.html";
+import Postpone from "@modules/postpone.js"
 
 
 document.addEventListener('DOMContentLoaded',

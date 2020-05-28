@@ -49,6 +49,19 @@ module.exports = () => ({
     }), 
 
   ],
-  
+  resolve: {
+    enforceExtension: false,
+    alias: {
+      '@': path.resolve(__dirname,'src'),
+      '@assets': path.resolve(__dirname,'src/assets'),
+      '@templates': path.resolve(__dirname,'src/templates'),
+      '@partials': path.resolve(__dirname,'src/templates/partials'),
+      '@css': path.resolve(__dirname,'src/assets/css'),
+      '@modules': path.resolve(__dirname,'src/modules'),
+      '@lib': path.resolve(__dirname,'src/lib'),
+      //'@lib': [path.resolve(__dirname,'src/lib'), path.resolve(__dirname,'src/modules')]
+      // reserved for webpack 5 when adopted
+    },
+  },
   target: "web"  
 })
