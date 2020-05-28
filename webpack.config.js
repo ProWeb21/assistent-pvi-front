@@ -20,6 +20,7 @@ module.exports = () => ({
   },
   mode: 'development',
   module:{
+    noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,    
     rules:[     
       {
         test: /\.s?[ac]ss$/,
