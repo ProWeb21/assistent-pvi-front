@@ -2,6 +2,21 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS = {
+  template: path.resolve(__dirname,"src/templates/app.html"),
+  filename: path.resolve(__dirname,"dist/index.html"),
+  inject: "body",      
+  minify: false
+}
+
+const MECP_OPTIONS = {
+  publicPath: "/assets/css",
+  filename: "assets/css/styles.css",
+  hmr: true,
+  // if hmr does not work, this is a forceful method.
+  reloadAll: true,
+}
+
 module.exports = () => ({ 
 
   devServer: {
@@ -53,20 +68,8 @@ module.exports = () => ({
     path: path.resolve(__dirname,"dist"),
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,"src/templates/app.html"),
-      filename: path.resolve(__dirname,"dist/index.html"),
-      inject: "body",      
-      minify: false
-    }),
-    new MiniCssExtractPlugin({
-      publicPath: "/assets/css",
-      filename: "../assets/css/styles.css",
-      hmr: true,
-      // if hmr does not work, this is a forceful method.
-      reloadAll: true,
-    }), 
-
+    new HtmlWebpackPlugin(HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS),
+    new MiniCssExtractPlugin(MECP_OPTIONS),
   ],
   resolve: {
     enforceExtension: false,
@@ -84,3 +87,6 @@ module.exports = () => ({
   },
   target: "web"  
 })
+
+module.exports.HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS = HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS
+module.exports.MECP_OPTIONS = MECP_OPTIONS
