@@ -25,7 +25,25 @@ module.exports = () => ({
         test: /\.s?[ac]ss$/,
         use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+        use: [
 
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 4096,
+              fallback: {
+                loader: 'file-loader',
+                options: {
+                  name: 'img/[name].[ext]',// 'img/[name].[hash:8].[ext]'
+                  esModule:false,
+                }
+              }
+            }
+          }
+        ]      
+      }
     ]
   },
   output:
