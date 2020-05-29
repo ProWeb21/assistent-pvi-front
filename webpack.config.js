@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS = {
   template: path.resolve(__dirname,"src/index.html"),
@@ -42,6 +43,30 @@ module.exports = () => ({
     noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,    
     rules:[ 
       {
+        test: /\.vue$/,
+        use: [
+          /* config.module.rule('vue').use('cache-loader') */
+          {
+            loader: 'cache-loader',
+            options: {
+              cacheDirectory: path.resolve(__dirname,'node_modules','.cache','vue-loader'),
+              cacheIdentifier: 'f9cf7794'
+            }
+          },
+          /* config.module.rule('vue').use('vue-loader') */
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                whitespace: 'condense'
+              },
+              cacheDirectory: path.resolve(__dirname,'node_modules','.cache','vue-loader'),
+              cacheIdentifier: 'f9cf7794'
+            }
+          }
+        ]
+      },     
+      {
         test: /\.s?[ac]ss$/,
         use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"],
       },
@@ -72,6 +97,7 @@ module.exports = () => ({
     path: path.resolve(__dirname,"dist"),
   },
   plugins: [
+    new VueLoaderPlugin(),    
     new HtmlWebpackPlugin(HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS),
     new MiniCssExtractPlugin(MECP_OPTIONS),
   ],
