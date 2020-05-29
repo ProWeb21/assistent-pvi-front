@@ -1,11 +1,24 @@
+// APP
 // STYLES
 import "@css/styles.css"
-// SCRIPTS
+// FRAMEWORK
+import Vue from "vue"
+
+import router from "@router"
+
+
+
+/*// SCRIPTS
 import modal_html from "html-loader!@partials/timer_modal.html";
-import Postpone from "@modules/postpone.js"
+import Postpone from "@modules/postpone.js"*/
 
 
-document.addEventListener('DOMContentLoaded',
+const app = new Vue({
+  router
+}).$mount('#app');
+
+
+/*document.addEventListener('DOMContentLoaded',
   function(event) {  
     var main = document.querySelector('body main');
     var timer = new Postpone(modal_html,main);    
@@ -22,3 +35,4 @@ function addPostponeHandler(element, postpone_function){
     postpone_function(parseInt(element.dataset.delay));
   });
 }
+*/
