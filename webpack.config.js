@@ -33,10 +33,14 @@ module.exports = () => ({
   entry: {
     index:'./src/main.js'
   },
+  externals:{
+    vue: 'Vue',
+    'vue-router':'VueRouter'
+  },
   mode: 'development',
   module:{
     noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,    
-    rules:[     
+    rules:[ 
       {
         test: /\.s?[ac]ss$/,
         use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"],
