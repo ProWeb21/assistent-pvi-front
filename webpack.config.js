@@ -43,7 +43,12 @@ module.exports = () => ({
     noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,    
     rules:[ 
       {
-        test: /\.vue$/,
+        test: /\.svg$/i,
+        issuer: /\.vue$/i,
+        loader: "vue-svg-loader"
+      },
+      {
+        test: /\.vue$/i,
         use: [
           /* config.module.rule('vue').use('cache-loader') */
           {
@@ -65,7 +70,7 @@ module.exports = () => ({
             }
           }
         ]
-      },     
+      },
       {
         test: /\.s?[ac]ss$/,
         use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"],

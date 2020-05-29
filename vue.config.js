@@ -6,6 +6,15 @@ const webpack_config = webpack_config_import();
 const HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS = webpack_config_import.HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS
 const MECP_OPTIONS = webpack_config_import.MECP_OPTIONS
 
+let svg_rule = false;
+// Rule for svg's imported from .vue files
+for (var rule of webpack_config.module.rules){
+  if ((String(rule.test) == String(/\.svg$/i)) &&
+      (String(rule.issuer)== String(/\.vue$/i)))
+  svg_rule = rule;
+  break;
+}
+
 // This settings are described in https://cli.vuejs.org/config
 
 module.exports = {
@@ -39,6 +48,24 @@ module.exports = {
       })
     config.resolve.alias.merge(webpack_config.resolve.alias,['vue$'])
     config.externals(webpack_config.externals)
+    
+    
+    if (svg_rule){      
+      // Necessary due this issue
+      // @link https://github.com/neutrinojs/webpack-chain/issues/264
+
+      // trick taken from https://fabiofranchino.com/blog/inject-svg-in-dom-with-vue/      
+      config.module.rule('svg').uses.clear()
+      config.module.rule('svg')
+        //.set('issuer',svg_rule.issuer)
+        .test(svg_rule.test)
+        .use(svg_rule.loader)
+          .loader(svg_rule.loader)              
+      // Commented due same previous issue
+      //config.module.rules.set('svg',svg_rule)
+      //config.merge({module:{rule:{'svg':svg_rule}}}) // alternative to previous line affected by another issue      
+    }
+
   },
   css:{
     requireModuleExtension: true,
