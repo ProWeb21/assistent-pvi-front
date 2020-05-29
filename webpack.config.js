@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const HTML_WEBPACK_PLUGUIN_INDEX_OPTIONS = {
-  template: path.resolve(__dirname,"src/templates/app.html"),
+  template: path.resolve(__dirname,"src/index.html"),
   filename: path.resolve(__dirname,"dist/index.html"),
   inject: "body",      
   minify: false
