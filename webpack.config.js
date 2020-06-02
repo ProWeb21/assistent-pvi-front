@@ -110,12 +110,15 @@ module.exports = () => ({
     enforceExtension: false,
     alias: {
       '@': path.resolve(__dirname,'src'),
+      '@api': path.resolve(__dirname,'src/api'),
       '@assets': path.resolve(__dirname,'src/assets'),
       '@templates': path.resolve(__dirname,'src/templates'),
       '@partials': path.resolve(__dirname,'src/templates/partials'),
       '@css': path.resolve(__dirname,'src/assets/css'),
       '@views': path.resolve(__dirname,'src/views'),
+      '@store': path.resolve(__dirname,'src/store'),
       '@router': path.resolve(__dirname,'src/router'),
+      '@plugins': path.resolve(__dirname,'src/plugins'),
       '@modules': path.resolve(__dirname,'src/modules'),
       '@lib': path.resolve(__dirname,'src/lib'),
       //'@lib': [path.resolve(__dirname,'src/lib'), path.resolve(__dirname,'src/modules')]
