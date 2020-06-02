@@ -3,18 +3,26 @@
 import "@css/styles.css"
 // FRAMEWORK
 import Vue from "vue"
-
+// PLUGINS
+import Vuex, { Store, mapState } from 'vuex'
+Vue.use(Vuex)
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+import PVI from '@plugins/pvi'
+Vue.use(PVI)
+// SCRIPTS
 import router from "@router"
+import store from "@store"
 
 
-
-/*// SCRIPTS
-import modal_html from "html-loader!@partials/timer_modal.html";
-import Postpone from "@modules/postpone.js"*/
 
 
 const app = new Vue({
-  router
+  router:new VueRouter(router),
+  store: new Store(store),
+/*  watch:{
+    $route: function(to,from){console.log('watchig $route from main')},
+  }*/
 }).$mount('#app');
 
 
