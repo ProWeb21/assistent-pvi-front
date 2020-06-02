@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <li style="cursor:pointer;" v-for="protocol in protocols" @click="load_protocol(protocol.id)">
+        <span>{{ protocol.label }}</span>
+        <span>{{ protocol.name }}</span>
+    </li>
+  </ul>
+</div>
