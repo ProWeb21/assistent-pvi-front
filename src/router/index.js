@@ -1,10 +1,8 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
 
 // INITIALLY LOADED COMPONENTS
 import Welcome from "@views/Welcome.vue";
 
-Vue.use(VueRouter);
+
 
 // route_components property names MUST MATCH 
 // exported routes object property names
@@ -33,10 +31,10 @@ for (let name in routes)
   })
 
 
-const router = new VueRouter({
+const router = {
   mode: "history",
   base: process.env.BASE_URL,
   routes: compiled_routes
-});
+}
 
 export default router;
