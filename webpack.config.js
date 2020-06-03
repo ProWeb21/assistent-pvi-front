@@ -23,12 +23,14 @@ module.exports = () => ({
   devServer: {
     contentBase: path.join(__dirname, "./dist"),
     index: "index.html",
+    historyApiFallback: true,
     hot: false,
     liveReload: true,
     port: 9000,
     publicPath: "/",
     watchContentBase: true,
-    writeToDisk: true
+    writeToDisk: false
+    
   },
   devtool: "source-map",
   entry: {
