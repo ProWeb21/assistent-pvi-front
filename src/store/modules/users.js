@@ -3,31 +3,31 @@ import '@lib/polyfills/Array'
 
 const default_users = [
   {   
-    id: "1",
+    id: 1,
     name: "Guaita",
     shortname: "Guaita",
     label: "G"
   },
   {   
-    id: "2",
+    id: 2,
     name: "Informador/a",
     shortname: "Informador/a",
     label: "I"
   },
   {   
-    id: "3",
+    id: 3,
     name: "Operador/a",
     shortname: "Operador/a",
     label: "OP"
   },
   {   
-    id: "4",
+    id: 4,
     name: "Responsable de Control",
     shortname: "Responsable",
     label: "RC"
   },
   {   
-    id: "5",
+    id: 5,
     name: "Enginyer/a Responsable de Dispositiu",
     shortname: "Enginyer/a",
     label: "ERD"
@@ -39,15 +39,16 @@ const users_module = {
     current_user: null,
   }),  
   getters: {
-    getUserByid: (state) => (protocol_id) => {
+    getUserByid: (state) => (user_id) => {
       let result = null
-      if (Array.isArray(state.protocols)){
-        let filtered = state.protocols.filter((protocol)=>(parseInt(protocol.id)===parseInt(protocol_id)))
+      if (Array.isArray(state.users)){
+        let filtered = state.users.filter((user)=>(parseInt(user.id)===parseInt(user_id)))
         if (filtered.length)
-          result = filtered.unshift()
+          result = filtered.shift()
       }
       return result      
-    }
+    },
+    getCurrentUser: (state) => state.current_user
   },
   mutations:{
     users(state, users){
