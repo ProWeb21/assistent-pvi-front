@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li style="cursor:pointer;" v-for="user in users" @click="login(user.id)">
+    <li style="cursor:pointer;" :class="userClass(index)" v-for="(user,index) in users" @click="login(user.id)">
         <span>{{ user.label }}</span>
         <span>{{ user.shortname }}</span>
     </li>
