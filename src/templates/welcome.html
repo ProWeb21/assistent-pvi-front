@@ -1,17 +1,16 @@
 <main data-view="partials/welcome" class="container vw-100 "> 
   
-  <h1 class="h6 mx-auto text-darck text-center w-75 mt-4 font-italic	 font-weight-bold	">Pla d'Informació i Vigilància contra Incendis Forestals</h1>
-  <!-- <div class="row w-100 mt-2 mx-0">
-  </div> -->
-  <img :src="pvi_logo" alt="Pla d'Informació i Vigilància" class="img-fluid mx-auto d-block">
-  <div class="mx-5 mt-5">
+  <h1 class="h6 mx-auto text-darck text-center w-75 mt-4 font-italic	 font-weight-bold	" >Pla d'Informació i Vigilància<br/>contra Incendis Forestals</h1>
+  <img :src="$root.pvi_logo" alt="Pla d'Informació i Vigilància" class="img-fluid mx-auto d-block" >
+
+  <div class="mx-5 mt-5" >
     <SpinnerSvg/>
     <p class="text-center mt-3 text-uppercase text-primary">Carregant Assistent</p>
   </div>
 
-  <footer class="mt-5 row">
-    <address class=" col-6  p-0 my-auto small h6"> Oficina Tècnica de Prevenció Municipal d'Incendis Forestals i Desenvolupament Agrari</address>
-    <img :src="diba_logo" alt="Diputació Barcelona" class="col-6 p-1 dibalogo img-fluid">
+  <footer>
+    <address class=" col-6  p-0 my-auto small h6" >Oficina Tècnica de Prevenció Municipal d'Incendis Forestals i Desenvolupament Agrari</address>
+    <img :src="diba_logo" alt="Diputació Barcelona" class="col-6 p-1 dibalogo img-fluid" >
   </footer>
 
 </main>

@@ -1,15 +1,15 @@
 <script>
 import template from 'html-loader!@partials/protocols.html'
 import { getProtocols } from '@api'
-import { mapState, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 
 
 export default {
   template: template,
   computed: {
-    ...mapState({
-      protocols: state => state.protocols.protocols
+    ...mapGetters({
+      protocols: "current_user_protocols"
     })
   },  
   methods:{

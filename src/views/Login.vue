@@ -6,6 +6,9 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   template: template,
+  data:()=>({
+    user_classes:["orange","cyan","yellow","green","purple"],
+  }),
   computed: {
     ...mapState({
       users: state => state.users.users
@@ -18,6 +21,10 @@ export default {
     login(user_id){
       this.$store.dispatch('setUser',user_id)
       this.$router.push({name: "protocols"})
+    },
+    userClass(i)  {
+      let index = i % this.user_classes.length;
+      return this.user_classes[index]
     }
   },
   beforeRouteEnter(to, from, next){
@@ -28,3 +35,22 @@ export default {
 
 }
 </script>
+<style scoped>
+.orange{
+  background-color: var(--orange);
+}
+.cyan{
+  background-color: var(--cyan);
+}
+.green{
+  background-color: var(--green);
+}
+.purple{
+  background-color: var(--purple);
+  color: var(--white);
+}
+.yellow{
+  background-color: var(--yellow);  
+}
+
+</style>

@@ -1,8 +1,8 @@
 <div class="text-center  mt-5">
   <ul class="p-2">
-    <li class=" rol mt-4 row  align-items-center justify-content-around   " style="cursor:pointer;" v-for="user in users" @click="login(user.id)">
-        <span class="h4 orange  col-3 rounded-circle label-login p-0 ml-4">{{ user.label }}</span>
-        <span class="h4 shortname green col-7 mr-4">{{ user.shortname }}</span>
+    <li class=" rol mt-4 row  align-items-center justify-content-around   " style="cursor:pointer;" :class="userClass(index)" v-for="(user,index) in users" @click="login(user.id)">
+        <span class="h4 orange  col-3 rounded-circle label-login p-0 ml-4" >{{ user.label }}</span>
+        <span class="h4 shortname green col-7 mr-4" >{{ user.shortname }}</span>
     </li>
   </ul>
 </div>
