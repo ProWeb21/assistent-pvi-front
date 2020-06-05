@@ -2,53 +2,57 @@
 
 
 body {
-	background-color: #00A190;
+	background-color: white;
 }
-#title {
-	font-size: 1.5rem;
+.dibalogo {
+	width: 100%;
+	height: 5rem;
 }
+/* Clases creadas con variables bootstrap */
+.orange {
+	background-color: var(--orange);
+}
+.blue {
+	background-color: var(--blue);
+}
+.yellow{
+	background-color: var(--yellow);
+}
+.green{
+	background-color: var(--green);
+} 
+.pink {
+	background-color: var(--pink);
+}
+/* fin clases colores */
 
-#info {
-	font-size: 1.2rem;
-	background-color: #00BFA5; 
+.shortname {
+	border: 3px solid;
+	border-radius: 20px;
+	line-height: 3rem;
+	text-align: left;
+}
+.label-login {
+
+	font-size: 1rem;
+	font-weight: bold;
+	border: 3px solid;
+	line-height: 3rem;
+	max-width: 	 3.5rem ;
+}
+.protocol-row {
+	background-color: var(--gray-200);
+}
+.label-protocol {
+	line-height: 2rem;
+	max-width: 	 2rem;
+	border: 2px solid black;
 }
 .limited {
-	
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
-#display1{
-	height: 80%;
-}
-#countdown {
-	font-size: 3rem;
-	text-align: center;	
-	color: red;
-	font-weight: bold ;
-}
-.text {
-	text-align: justify; 
-}
-.jumbotron {
-	height: 50vh ;
-	background-color: #00BFA5 !important;
-}
-.navbar {
-	height: 10vh;
-}
-.zonabotones {
-	
-	text-align: center;
-	font-size: 3rem;
-	height:40vh;
-}
-
-.zonabotones > a {
-	color: black;
-	font-size: 1rem;
-}
-
-.btn {
-	min-width: 70vw;
+ul {
+	list-style: none;
 }

@@ -1,8 +1,10 @@
 <div>
-  <ul>
-    <li style="cursor:pointer;" v-for="protocol in protocols" @click="load_protocol(protocol.id)">
-        <span>{{ protocol.label }}</span>
-        <span>{{ protocol.name }}</span>
-    </li>
+  <ul class=" ">
+    <li class="d-block " style="cursor:pointer;" v-for="protocol in protocols" @click="load_protocol(protocol.id)">
+      <div class="row mt-2 gray-200">
+        <span class="col-2 label-protocol p-0 text-center   ">{{ protocol.label }}</span>
+        <span class="col-8 limited  my-auto" >{{ protocol.name }}</span>
+      </div>
+      </li>
   </ul>
 </div>
