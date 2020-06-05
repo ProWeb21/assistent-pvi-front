@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button :class="{hamburger:login,active:!open}" @click="open=!open">
+    <button :class="{hamburger:in_login,active:!open}" @click="open=!open">
       <span v-if="!$parent.in_login">{{ $parent.current_user.label }} </span>
     </button>
     
