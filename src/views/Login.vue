@@ -36,20 +36,51 @@ export default {
 }
 </script>
 <style scoped>
-.orange{
+
+li {
+  max-width: 576px;
+}
+
+li span {	
+	font-weight: bold;
+	border: 3px solid black;
+  line-height: 3rem;
+  
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+li span:first-child{
+  	max-width: 	 3.5rem;
+}
+
+li span:last-child {
+	border: 3px solid black;
+	border-radius: 20px;
+	text-align: left;
+}
+
+.orange,
+.blue,
+.yellow,
+.green,
+.pink {
+	background-color: unset;
+}
+
+li.orange span{
   background-color: var(--orange);
 }
-.cyan{
+li.cyan span{
   background-color: var(--cyan);
 }
-.green{
+li.green span{
   background-color: var(--green);
 }
-.purple{
+li.purple span{
   background-color: var(--purple);
   color: var(--white);
 }
-.yellow{
+li.yellow span{
   background-color: var(--yellow);  
 }
 

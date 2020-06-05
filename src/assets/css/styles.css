@@ -26,20 +26,6 @@ body {
 }
 /* fin clases colores */
 
-.shortname {
-	border: 3px solid;
-	border-radius: 20px;
-	line-height: 3rem;
-	text-align: left;
-}
-.label-login {
-
-	font-size: 1rem;
-	font-weight: bold;
-	border: 3px solid;
-	line-height: 3rem;
-	max-width: 	 3.5rem ;
-}
 .protocol-row {
 	background-color: var(--gray-200);
 }
